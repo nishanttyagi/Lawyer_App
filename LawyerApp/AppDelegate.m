@@ -13,6 +13,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [self initializeLocationManager];
+    
     return YES;
 }
 							
@@ -42,5 +45,44 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+-(void)initializeLocationManager
+{
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager setDistanceFilter:1000];
+    [locationManager startUpdatingLocation];
+}
+
+#pragma mark -
+#pragma mark LOCATION MANAGER DELEGATES -
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    locationCordinate = newLocation.coordinate;
+    
+    core_latitude = newLocation.coordinate.latitude;
+    core_longitude = newLocation.coordinate.longitude;
+    
+    [locationManager stopUpdatingLocation];
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    if ([error code] == 1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry !" message:@"Location Disabled" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        
+        [alert show];
+    }
+}
+
 
 @end

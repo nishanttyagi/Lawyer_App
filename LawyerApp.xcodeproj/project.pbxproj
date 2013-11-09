@@ -21,6 +21,10 @@
 		85198FEF182E19B700476841 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85198FD1182E19B600476841 /* UIKit.framework */; };
 		85198FF7182E19B700476841 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85198FF5182E19B700476841 /* InfoPlist.strings */; };
 		85198FF9182E19B700476841 /* LawyerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85198FF8182E19B700476841 /* LawyerAppTests.m */; };
+		85199003182E1A6600476841 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85199002182E1A6600476841 /* CoreLocation.framework */; };
+		85199005182E1A6F00476841 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85199004182E1A6F00476841 /* MapKit.framework */; };
+		85199008182E1A9000476841 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 85199007182E1A9000476841 /* Config.m */; };
+		8519900B182E231200476841 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8519900A182E231200476841 /* MyAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		85198FF4182E19B700476841 /* LawyerAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LawyerAppTests-Info.plist"; sourceTree = "<group>"; };
 		85198FF6182E19B700476841 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		85198FF8182E19B700476841 /* LawyerAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LawyerAppTests.m; sourceTree = "<group>"; };
+		85199002182E1A6600476841 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		85199004182E1A6F00476841 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		85199006182E1A9000476841 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		85199007182E1A9000476841 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		85199009182E231200476841 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		8519900A182E231200476841 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85199005182E1A6F00476841 /* MapKit.framework in Frameworks */,
+				85199003182E1A6600476841 /* CoreLocation.framework in Frameworks */,
 				85198FD0182E19B600476841 /* CoreGraphics.framework in Frameworks */,
 				85198FD2182E19B600476841 /* UIKit.framework in Frameworks */,
 				85198FCE182E19B600476841 /* Foundation.framework in Frameworks */,
@@ -101,6 +113,8 @@
 		85198FCC182E19B600476841 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85199004182E1A6F00476841 /* MapKit.framework */,
+				85199002182E1A6600476841 /* CoreLocation.framework */,
 				85198FCD182E19B600476841 /* Foundation.framework */,
 				85198FCF182E19B600476841 /* CoreGraphics.framework */,
 				85198FD1182E19B600476841 /* UIKit.framework */,
@@ -112,6 +126,10 @@
 		85198FD3182E19B600476841 /* LawyerApp */ = {
 			isa = PBXGroup;
 			children = (
+				85199009182E231200476841 /* MyAnnotation.h */,
+				8519900A182E231200476841 /* MyAnnotation.m */,
+				85199006182E1A9000476841 /* Config.h */,
+				85199007182E1A9000476841 /* Config.m */,
 				85198FDC182E19B600476841 /* AppDelegate.h */,
 				85198FDD182E19B600476841 /* AppDelegate.m */,
 				85198FDF182E19B600476841 /* Main.storyboard */,
@@ -250,6 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				85198FE4182E19B600476841 /* ViewController.m in Sources */,
+				8519900B182E231200476841 /* MyAnnotation.m in Sources */,
+				85199008182E1A9000476841 /* Config.m in Sources */,
 				85198FDE182E19B600476841 /* AppDelegate.m in Sources */,
 				85198FDA182E19B600476841 /* main.m in Sources */,
 			);
